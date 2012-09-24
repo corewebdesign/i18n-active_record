@@ -50,7 +50,9 @@ module I18n
         FALSY_CHAR = "\002"
 
         self.table_name = 'translations'
-        attr_accessible :locale, :key, :value
+
+        # attr_accessible has been extracted out of rails 4.0
+        # attr_accessible :locale, :key, :value
 
         serialize :value
         serialize :interpolations, Array
